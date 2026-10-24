@@ -37,6 +37,8 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(Arrays.asList(
                 "https://oaklandprofrontend.pages.dev",
+                "https://oaklandprocleaningservices.com",
+                "https://www.oaklandprocleaningservices.com",
                 "http://localhost:4200"
         ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
