@@ -27,7 +27,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/quotes/**", "/api/leads/**").permitAll() // public lead/quote submission
                         .requestMatchers("/api/admin/**").authenticated()
-                        .anyRequest().permitAll())
+                        .anyRequest().authenticated())
                 .httpBasic(b -> b.authenticationEntryPoint((req, res, ex) -> res.sendError(401)));
         return http.build();
     }
